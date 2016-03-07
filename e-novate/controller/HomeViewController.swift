@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
+
 class HomeViewController: BaseViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapview: MKMapView!
@@ -38,10 +39,14 @@ class HomeViewController: BaseViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation;
         print("didUpdateLocations lat:\(location.coordinate.latitude) lon:\(location.coordinate.longitude) distance:\(location.altitude)m");
+        
+        Utils.zoomToUserLocationInMapView(mapview);
+        
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         print("didChangeAuthorizationStatus \(status.rawValue)");
+        mapview.showsUserLocation = (status == .AuthorizedAlways)
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {

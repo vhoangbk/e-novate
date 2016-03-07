@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="e_novate" customModuleProvider="target">
             <connections>
-                <outlet property="mapview" destination="KWw-tm-DgT" id="Tg2-j0-lQu"/>
+                <outlet property="mapview" destination="KWw-tm-DgT" id="l0g-ag-9oe"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ITM-Xy-5pr"/>
             </connections>
         </placeholder>
