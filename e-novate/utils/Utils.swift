@@ -25,5 +25,14 @@ class Utils{
             mapView.setRegion(region, animated: true)
         }
     }
+    
+    class func setAnswer(key : String, value : Bool){
+        NSUserDefaults.standardUserDefaults().setBool(value, forKey: key);
+    }
+    
+    class func isAnswer(key : String) -> Bool{
+        let obj : Bool = NSUserDefaults.standardUserDefaults().boolForKey(key);
+        return obj != false;
+    }
 
 }

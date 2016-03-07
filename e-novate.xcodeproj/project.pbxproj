@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8816DA431C8D7E6400D43831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA421C8D7E6400D43831 /* AppDelegate.swift */; };
-		8816DA451C8D7E6400D43831 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA441C8D7E6400D43831 /* ViewController.swift */; };
 		8816DA481C8D7E6400D43831 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8816DA461C8D7E6400D43831 /* Main.storyboard */; };
 		8816DA4A1C8D7E6400D43831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8816DA491C8D7E6400D43831 /* Assets.xcassets */; };
 		8816DA4D1C8D7E6400D43831 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8816DA4B1C8D7E6400D43831 /* LaunchScreen.storyboard */; };
@@ -22,9 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F8DDEC81C8DD2D7002972CD /* VanMieu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VanMieu.gpx; sourceTree = "<group>"; };
+		7F8DDECB1C8DE06E002972CD /* ToHuu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ToHuu.gpx; sourceTree = "<group>"; };
 		8816DA3F1C8D7E6400D43831 /* e-novate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-novate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8816DA421C8D7E6400D43831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8816DA441C8D7E6400D43831 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8816DA471C8D7E6400D43831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8816DA491C8D7E6400D43831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8816DA4C1C8D7E6400D43831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,12 +71,13 @@
 				8816DA5B1C8D820300D43831 /* utils */,
 				8816DA541C8D7E9F00D43831 /* controller */,
 				8816DA421C8D7E6400D43831 /* AppDelegate.swift */,
-				8816DA441C8D7E6400D43831 /* ViewController.swift */,
 				8816DA461C8D7E6400D43831 /* Main.storyboard */,
 				8816DA491C8D7E6400D43831 /* Assets.xcassets */,
 				8816DA4B1C8D7E6400D43831 /* LaunchScreen.storyboard */,
 				8816DA4E1C8D7E6400D43831 /* Info.plist */,
 				8816DA601C8D8C7400D43831 /* note.rtf */,
+				7F8DDEC81C8DD2D7002972CD /* VanMieu.gpx */,
+				7F8DDECB1C8DE06E002972CD /* ToHuu.gpx */,
 			);
 			path = "e-novate";
 			sourceTree = "<group>";
@@ -133,6 +134,7 @@
 				TargetAttributes = {
 					8816DA3E1C8D7E6400D43831 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = M4XKHPXK2E;
 					};
 				};
 			};
@@ -174,7 +176,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8816DA451C8D7E6400D43831 /* ViewController.swift in Sources */,
 				8816DA431C8D7E6400D43831 /* AppDelegate.swift in Sources */,
 				8816DA561C8D7EBA00D43831 /* BaseViewController.swift in Sources */,
 				8816DA631C8D930E00D43831 /* Geotification.swift in Sources */,
@@ -291,6 +292,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Quang Pham (7KU3QL4BY8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Quang Pham (7KU3QL4BY8)";
 				INFOPLIST_FILE = "e-novate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -303,6 +306,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Quang Pham (7KU3QL4BY8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Quang Pham (7KU3QL4BY8)";
 				INFOPLIST_FILE = "e-novate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
