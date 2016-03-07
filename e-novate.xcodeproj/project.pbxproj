@@ -17,6 +17,8 @@
 		8816DA5A1C8D7F2D00D43831 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8816DA591C8D7F2D00D43831 /* HomeViewController.xib */; };
 		8816DA5D1C8D821C00D43831 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA5C1C8D821C00D43831 /* Const.swift */; };
 		8816DA5F1C8D822B00D43831 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA5E1C8D822B00D43831 /* Utils.swift */; };
+		8816DA611C8D8C7400D43831 /* note.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8816DA601C8D8C7400D43831 /* note.rtf */; };
+		8816DA631C8D930E00D43831 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA621C8D930E00D43831 /* Geotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		8816DA591C8D7F2D00D43831 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = controller/HomeViewController.xib; sourceTree = "<group>"; };
 		8816DA5C1C8D821C00D43831 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Const.swift; path = utils/Const.swift; sourceTree = "<group>"; };
 		8816DA5E1C8D822B00D43831 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = utils/Utils.swift; sourceTree = "<group>"; };
+		8816DA601C8D8C7400D43831 /* note.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = note.rtf; sourceTree = "<group>"; };
+		8816DA621C8D930E00D43831 /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				8816DA491C8D7E6400D43831 /* Assets.xcassets */,
 				8816DA4B1C8D7E6400D43831 /* LaunchScreen.storyboard */,
 				8816DA4E1C8D7E6400D43831 /* Info.plist */,
+				8816DA601C8D8C7400D43831 /* note.rtf */,
 			);
 			path = "e-novate";
 			sourceTree = "<group>";
@@ -89,6 +94,7 @@
 		8816DA5B1C8D820300D43831 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				8816DA621C8D930E00D43831 /* Geotification.swift */,
 				8816DA5C1C8D821C00D43831 /* Const.swift */,
 				8816DA5E1C8D822B00D43831 /* Utils.swift */,
 			);
@@ -157,6 +163,7 @@
 				8816DA4A1C8D7E6400D43831 /* Assets.xcassets in Resources */,
 				8816DA481C8D7E6400D43831 /* Main.storyboard in Resources */,
 				8816DA5A1C8D7F2D00D43831 /* HomeViewController.xib in Resources */,
+				8816DA611C8D8C7400D43831 /* note.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +177,7 @@
 				8816DA451C8D7E6400D43831 /* ViewController.swift in Sources */,
 				8816DA431C8D7E6400D43831 /* AppDelegate.swift in Sources */,
 				8816DA561C8D7EBA00D43831 /* BaseViewController.swift in Sources */,
+				8816DA631C8D930E00D43831 /* Geotification.swift in Sources */,
 				8816DA581C8D7ED600D43831 /* HomeViewController.swift in Sources */,
 				8816DA5D1C8D821C00D43831 /* Const.swift in Sources */,
 				8816DA5F1C8D822B00D43831 /* Utils.swift in Sources */,
@@ -322,6 +330,7 @@
 				8816DA531C8D7E6400D43831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

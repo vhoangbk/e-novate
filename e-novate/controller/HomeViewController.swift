@@ -10,10 +10,9 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class HomeViewController: BaseViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class HomeViewController: BaseViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapview: MKMapView!
-//    var geotifications = [Geotification]()
     let locationManager = CLLocationManager();
 
     override func viewDidLoad() {
@@ -22,11 +21,11 @@ class HomeViewController: BaseViewController, MKMapViewDelegate, CLLocationManag
         self.navigationController?.setNavigationBarHidden(true, animated: false);
         
         // 1
-        locationManager.delegate = self
+        locationManager.delegate = self;
         // 2
-        locationManager.requestAlwaysAuthorization()
+        locationManager.requestAlwaysAuthorization();
         // 3
-//        loadAllGeotifications()
+        locationManager.startUpdatingLocation();
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,12 +33,19 @@ class HomeViewController: BaseViewController, MKMapViewDelegate, CLLocationManag
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: CLLocationManagerDelegate
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations);
+        let location = locations.last! as CLLocation;
+        print("didUpdateLocations lat:\(location.coordinate.latitude) lon:\(location.coordinate.longitude) distance:\(location.altitude)m");
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        print(status.rawValue);
+        print("didChangeAuthorizationStatus \(status.rawValue)");
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("didFailWithError "+error.description);
     }
 
 }
