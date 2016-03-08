@@ -18,6 +18,7 @@
 		8816DA5F1C8D822B00D43831 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA5E1C8D822B00D43831 /* Utils.swift */; };
 		8816DA611C8D8C7400D43831 /* note.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8816DA601C8D8C7400D43831 /* note.rtf */; };
 		8816DA631C8D930E00D43831 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA621C8D930E00D43831 /* Geotification.swift */; };
+		883C6BD01C8E759F00749568 /* LeDuan.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 883C6BCF1C8E759F00749568 /* LeDuan.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,9 @@
 		8816DA5E1C8D822B00D43831 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = utils/Utils.swift; sourceTree = "<group>"; };
 		8816DA601C8D8C7400D43831 /* note.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = note.rtf; sourceTree = "<group>"; };
 		8816DA621C8D930E00D43831 /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
+		883C6BCF1C8E759F00749568 /* LeDuan.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LeDuan.gpx; sourceTree = "<group>"; };
+		883C6BD11C8E75E400749568 /* KhamThiem.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KhamThiem.gpx; sourceTree = "<group>"; };
+		883C6BD21C8E760A00749568 /* BachKhoa.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BachKhoa.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,9 @@
 				8816DA601C8D8C7400D43831 /* note.rtf */,
 				7F8DDEC81C8DD2D7002972CD /* VanMieu.gpx */,
 				7F8DDECB1C8DE06E002972CD /* ToHuu.gpx */,
+				883C6BCF1C8E759F00749568 /* LeDuan.gpx */,
+				883C6BD11C8E75E400749568 /* KhamThiem.gpx */,
+				883C6BD21C8E760A00749568 /* BachKhoa.gpx */,
 			);
 			path = "e-novate";
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 			files = (
 				8816DA4D1C8D7E6400D43831 /* LaunchScreen.storyboard in Resources */,
 				8816DA4A1C8D7E6400D43831 /* Assets.xcassets in Resources */,
+				883C6BD01C8E759F00749568 /* LeDuan.gpx in Resources */,
 				8816DA481C8D7E6400D43831 /* Main.storyboard in Resources */,
 				8816DA5A1C8D7F2D00D43831 /* HomeViewController.xib in Resources */,
 				8816DA611C8D8C7400D43831 /* note.rtf in Resources */,
