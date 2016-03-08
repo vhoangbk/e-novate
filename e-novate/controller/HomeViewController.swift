@@ -11,7 +11,7 @@ import CoreLocation
 import MapKit
 
 
-class HomeViewController: BaseViewController, CLLocationManagerDelegate {
+class HomeViewController: BaseViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapview: MKMapView!
     let locationManager = CLLocationManager();
@@ -28,25 +28,69 @@ class HomeViewController: BaseViewController, CLLocationManagerDelegate {
         // 3
 //        locationManager.startUpdatingLocation();
         
+        self.mapview.delegate = self;
+        
+        let region = MKCoordinateRegionMakeWithDistance(BACK_KHOA.coordinate, 1000, 1000)
+        self.mapview.setRegion(region, animated: true)
+        
 //        let vanmieu = CLLocationCoordinate2D(latitude: 21.028450, longitude: 105.835910);
       
 //        let reggion = CLCircularRegion(center: vanmieu, radius: 500, identifier: "vanmieu");
         
 //        locationManager.startMonitoringForRegion(reggion);
 //        locationManager.requestStateForRegion(reggion)
-    }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil);
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didEnterBackground", name: UIApplicationDidEnterBackgroundNotification, object: nil);
+        
+        let request = MKDirectionsRequest()
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: VAN_MIEU.coordinate.latitude, longitude: VAN_MIEU.coordinate.longitude), addressDictionary: nil))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: BACK_KHOA.coordinate.longitude, longitude: BACK_KHOA.coordinate.longitude), addressDictionary: nil))
+        request.requestsAlternateRoutes = true
+        request.transportType = MKDirectionsTransportType.Automobile
+        
+        let directions = MKDirections(request: request)
+        
+//        directions.calculateDirectionsWithCompletionHandler { [unowned self] response, error in
+//            guard let unwrappedResponse = response else { return }
+//            
+//            for route in unwrappedResponse.routes {
+//                self.mapview.addOverlay(route.polyline)
+//                self.mapview.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+//            }
+//        }
+        
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        directions.calculateDirectionsWithCompletionHandler { (response, error) -> Void in
+            if error == nil {
+                for route in response!.routes {
+                    self.mapview.addOverlay(route.polyline)
+                    self.mapview.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                }
+            }
+        }
+        
     }
     
-    override func viewWillAppear(animated: Bool) {
+    func didBecomeActive(){
+        NSLog("didBecomeActive");
         locationManager.startUpdatingLocation();
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    func didEnterBackground(){
+        NSLog("didEnterBackground");
         locationManager.stopUpdatingLocation()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        NSLog("viewWillAppear");
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated);
+        NSLog("viewWillDisappear");
     }
     
     
@@ -70,17 +114,18 @@ class HomeViewController: BaseViewController, CLLocationManagerDelegate {
             if(!Utils.isAnswer(KEY_QUESTION_LIST[index])){
                 Utils.showSimpleAlertWithTitle("Question", message: QUESTION_LIST[index], viewController: self);
                 Utils.setAnswer(KEY_QUESTION_LIST[index], value: true);
-                Utils.zoomToUserLocationInMapView(mapview);
             }
             
         }
         
+//        Utils.zoomToUserLocationInMapView(self.mapview);
         
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         print("didChangeAuthorizationStatus \(status.rawValue)");
-        mapview.showsUserLocation = (status == .AuthorizedAlways)
+//        mapview.showsUserLocation = (status == .AuthorizedAlways)
+//        Utils.zoomToUserLocationInMapView(self.mapview);
         
     }
     
@@ -106,6 +151,14 @@ class HomeViewController: BaseViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didDetermineState state: CLRegionState, forRegion region: CLRegion) {
         print("didDetermineState state:\(state.rawValue)  region:\(region)");
+    }
+    
+    // MARK: MKMapViewDelegate
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        NSLog("rendererForOverlay");
+        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        renderer.strokeColor = UIColor.blueColor()
+        return renderer
     }
 
 }
