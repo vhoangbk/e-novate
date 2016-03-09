@@ -17,7 +17,6 @@
 		8816DA5D1C8D821C00D43831 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA5C1C8D821C00D43831 /* Const.swift */; };
 		8816DA5F1C8D822B00D43831 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA5E1C8D822B00D43831 /* Utils.swift */; };
 		8816DA611C8D8C7400D43831 /* note.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8816DA601C8D8C7400D43831 /* note.rtf */; };
-		8816DA631C8D930E00D43831 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816DA621C8D930E00D43831 /* Geotification.swift */; };
 		883C6BD01C8E759F00749568 /* LeDuan.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 883C6BCF1C8E759F00749568 /* LeDuan.gpx */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		8816DA5C1C8D821C00D43831 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Const.swift; path = utils/Const.swift; sourceTree = "<group>"; };
 		8816DA5E1C8D822B00D43831 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = utils/Utils.swift; sourceTree = "<group>"; };
 		8816DA601C8D8C7400D43831 /* note.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = note.rtf; sourceTree = "<group>"; };
-		8816DA621C8D930E00D43831 /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
 		883C6BCF1C8E759F00749568 /* LeDuan.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LeDuan.gpx; sourceTree = "<group>"; };
 		883C6BD11C8E75E400749568 /* KhamThiem.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KhamThiem.gpx; sourceTree = "<group>"; };
 		883C6BD21C8E760A00749568 /* BachKhoa.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BachKhoa.gpx; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 		8816DA5B1C8D820300D43831 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				8816DA621C8D930E00D43831 /* Geotification.swift */,
 				8816DA5C1C8D821C00D43831 /* Const.swift */,
 				8816DA5E1C8D822B00D43831 /* Utils.swift */,
 			);
@@ -186,7 +183,6 @@
 			files = (
 				8816DA431C8D7E6400D43831 /* AppDelegate.swift in Sources */,
 				8816DA561C8D7EBA00D43831 /* BaseViewController.swift in Sources */,
-				8816DA631C8D930E00D43831 /* Geotification.swift in Sources */,
 				8816DA581C8D7ED600D43831 /* HomeViewController.swift in Sources */,
 				8816DA5D1C8D821C00D43831 /* Const.swift in Sources */,
 				8816DA5F1C8D822B00D43831 /* Utils.swift in Sources */,
